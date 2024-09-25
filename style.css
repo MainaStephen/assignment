@@ -1,0 +1,41 @@
+
+h2.form-title {
+    width: 20%;
+    margin-left: 74px;
+}
+.form-outer {
+    padding: 80px 50px;
+    background: #fff;
+    -webkit-box-shadow: 0px 20px 40px rgba(60, 63, 130, 0.07);
+    box-shadow: 0px 20px 40px rgba(60, 63, 130, 0.07);
+    position: relative;
+    /* width: 80%; */
+    margin: 60px 128px;
+}
+.form-inputs{
+    display: flex;
+    justify-content: space-evenly;
+}
+.form-input input,textarea{
+    padding: 15px 20px;
+    background: rgba(60, 63, 130, 0.04);
+    border: 0;
+    border-bottom: 1px solid rgba(60, 63, 130, 0.07);
+    width: 28vw;
+    margin-bottom: 40px;
+}
+button {
+    width: 15vw;
+    height: 6vh;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 445px;
+}
+button:hover{
+    background-color: gray;
+    color: white;
+}
