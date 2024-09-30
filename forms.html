@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+
 </head>
 <body>
+    <section class="navbar">
+        <div class="logo">
+            <a href="./index.html"><img class="logoimg" src="./assets/images/logo.png" alt=""></a>
+        </div>
+        <div class="links">
+           <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="forms.html">Feedback</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+           </ul>  
+        </div>
+        <input class="book-btn" type="button" value="Book">
+    </section>
     <section>
         <div class="form-outer">
             <h2 class="form-title">Feedback Form</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="return validateForm()">
                <div class="form-inputs">
                 <div class="inputs1">
                     <div class="form-input">
@@ -18,27 +35,23 @@
                     </div>
 
                     <div class="form-input">
-                        <input id="form_email" type="email" name="email" placeholder="Email"
-                            required>
+                        <input id="form_email" type="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-input">
-                        <input id="form_subject" type="text" name="phoneNumber"
-                            placeholder="Phone Number" required>
+                        <input id="form_subject" type="text" name="phoneNumber" placeholder="Phone Number" required>
                     </div>
                     
                 </div>
 
-                   
                 <div class="inputs2">
                     <div class="form-input">
                         <input id="form_roomNo" type="text" name="roomNo" placeholder="Room Number" required>
                     </div>
                     <div class="form-input">
-                        <input id="form_subject" type="date" name="phoneNumber"
-                            placeholder="Phone Number" required>
+                        <input id="form_date" type="date" name="date" required>
                     </div>
                     <div class="form-input">
-                        <textarea name="form_feedback" id="" placeholder="Enter Your Feedback"></textarea>
+                        <textarea name="form_feedback" id="" placeholder="Enter Your Feedback" required></textarea>
                      </div>
                 </div>
                 
@@ -47,5 +60,55 @@
             </form>
         </div>
     </section>
+    <footer>
+        <center>
+            <h5> The Grand Haven Hotel | Where Timeless Elegance Meets Modern Comfort</h5>
+            <h5>123 Oceanview Avenue, City, State | +1 (555) 123-4567 | info@grandhavenhotel.com</h5>
+            <h5>© 2024 The Grand Haven Hotel. All Rights Reserved.</h5>
+        </center>
+    </footer>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("form_name").value;
+            let email = document.getElementById("form_email").value;
+            let phoneNumber = document.getElementById("form_subject").value;
+            let roomNo = document.getElementById("form_roomNo").value;
+            let feedback = document.getElementsByName("form_feedback")[0].value;
+
+            // Name validation: should not be empty
+            if (name === "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+
+            // Email validation: should follow the email format
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            // Phone number validation: should be numeric and of 10 digits
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phoneNumber)) {
+                alert("Please enter a valid 10-digit phone number");
+                return false;
+            }
+
+            // Room number validation: should not be empty
+            if (roomNo === "") {
+                alert("Room Number cannot be empty");
+                return false;
+            }
+
+            // Feedback validation: should not be empty and at least 10 characters long
+            if (feedback === "" || feedback.length < 10) {
+                alert("Feedback must be at least 10 characters long");
+                return false;
+            }
+
+            return true; 
+        }
+    </script>
 </body>
 </html>

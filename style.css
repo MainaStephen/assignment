@@ -1,6 +1,232 @@
+*{
+    font-family: "Goudy Bookletter 1911", sans-serif;
+}
 
+/*navbar  */
+.logoimg {
+    height: 59px;
+    position: relative;
+    top: -7px;
+    /* size: 54px; */
+    width: 71px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px; 
+    box-shadow: 0px 20px 40px rgba(60, 63, 130, 0.07);
+    position: static;
+    background-color: white;
+}
+
+.navlinks {
+    display: flex;
+    margin-left: 241px;
+    
+}
+
+.navlinks li {
+    margin-left: 123px;
+    list-style: none;
+    
+}
+
+.links li a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.links li a:hover{
+    text-decoration: underline;
+    cursor: pointer; 
+}
+.book-btn {
+    left: 0;
+    background-color: black;
+    border-radius: 10px;
+    width: 83px;
+    height: 39px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+
+.header-image{
+    background-image: url(./assets/images/hotel3.webp);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 500px; 
+}
+.booking-bar {
+    background-color: white;
+    /* opacity: 0.5; */
+    width: 821px;
+    position: relative;
+    left: 24rem;
+    top: 220px;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    height:62px;
+    display: flex;
+
+}
+input[type="date"],input[type="number"],input[type="button"],select#rooms {
+    /* width: 177px; */
+    height: 42px;
+    border: none;
+}
+
+input[type="number"],select#rooms{
+    position: relative;
+    top: 6px;
+}
+
+input.book-btn.book {
+   margin:0 20px;
+}
+
+.welcoming-message {
+    text-align: center;
+    /* margin-left: 100px; */
+    width: 60%;
+    position: relative;
+    right: -29rem;
+    top: 62px;
+    background-color: white;
+    -webkit-box-shadow: -6px -6px 65px 44px rgba(0,0,0,0.75);
+    -moz-box-shadow: -6px -6px 65px 44px rgba(0,0,0,0.75);
+    box-shadow: -6px -6px 65px 44px rgba(0,0,0,0.75);
+    padding: 26px;
+}
+.hotel-services{
+    display: flex;
+    margin-top: 60px;
+}
+img.image-home {
+    width: 53vw;
+}
+.amenities{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 30px;
+}
+.amenities img{
+    width: 7vw;
+}
+.accomodation{
+    background-image: url(./assets/images/room2.jpg);
+    background-size: cover; /* Ensures the whole image is visible */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 500px; /* Set your desired height */
+}
+.accommodation-content {
+    padding: 3rem;
+    background-color: white;
+    width: 26vw;
+    position: relative;
+    left: 12rem;
+    top: 6rem;
+    
+}
+.accommodation-title,.accommodation-paragraph{
+    font-weight: 200;
+}
+
+ a{
+    color:#B1752B ;
+
+}
+.testimonial {
+    width: 100%;
+    background-color: #f5f4f4;
+    background-image: url(./assets/images/left.png),url(./assets/images/right.png);
+    background-repeat: no-repeat;
+    background-position: left top, right top;
+    padding-bottom: 150px;
+    /* height: 20rem; */
+}
+.testimony {
+    width: 65%;
+    text-align: center;
+    position: relative;
+    top: 145px;
+    left: 251px;
+}
+/* rooms */
+.executive {
+    display: flex;
+    margin: 20px;
+}
+.room-img img {
+    width: 90%;
+    margin-left: 33px;
+}
+.room-details{
+    width: 70%;
+}
+.room-details h2{
+    text-decoration: underline;
+}
+sub {
+    position: relative;
+    top: -5px;
+}
+.executive.standard {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.room-img.junior {
+    width: 74%;
+}
+
+.room-img.executive {
+    width: 65vw;
+}
+
+/* about us */
+.about-header{
+clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 57%);
+display: flex;
+justify-content: space-around;
+height: 20rem;
+background-color: black;
+color: #fff;
+text-align: center;
+align-self: center;
+align-items: center;
+font-size: 40px;
+}
+.about-title{
+    position: relative;
+    top: -40px;
+}
+.about-paragraph {
+    font-size: 15px;
+    margin: 0;
+}
+.accommodation-content.about {
+    top: 2rem;
+}
+
+
+
+
+
+/* form */
 h2.form-title {
-    width: 20%;
+    width: 25%;
     margin-left: 74px;
 }
 .form-outer {
@@ -39,3 +265,73 @@ button:hover{
     background-color: gray;
     color: white;
 }
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+input#rate-1,
+input#rate-1,
+input#rate-1,
+input#rate-1,
+input#rate-1{ 
+    width: 47px;
+}
+/* footer */
+
+footer h5{
+    margin: 0;
+}
+
+
+/* contact page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.contact-info div {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info div p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
